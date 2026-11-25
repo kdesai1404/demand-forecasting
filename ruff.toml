@@ -1,0 +1,4 @@
+line-length = 110
+[lint]
+select = ["E", "F"]
+ignore = ["E402", "E702"]   # E402: scripts add src/ to sys.path before importing; E702: compact one-liners

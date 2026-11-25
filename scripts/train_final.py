@@ -14,6 +14,8 @@ CONFIG = {**DEFAULT_PARAMS, "num_leaves": 63}   # chosen on the selection folds
 out = Path(sys.argv[1] if len(sys.argv) > 1 else "artifacts/model.joblib")
 out.parent.mkdir(parents=True, exist_ok=True)
 
+real = Path("data/train.csv").exists()
+print("Data:", "data/train.csv (real)" if real else "synthetic demo data")
 df = load("data/train.csv")
 series, dates = to_series_dict(df), get_dates(df)
 n = min(len(v) for v in series.values())

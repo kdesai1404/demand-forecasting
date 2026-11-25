@@ -1,0 +1,8 @@
+# Runtime dependencies only (used by Docker and CI)
+pandas>=2.0
+numpy>=1.24
+lightgbm>=4.0
+scikit-learn
+joblib
+fastapi>=0.110
+uvicorn>=0.27
